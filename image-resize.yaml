@@ -15,6 +15,7 @@ Resources:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     Properties:
+      BucketName: test.taylorm.cc
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html

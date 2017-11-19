@@ -12,8 +12,12 @@ const URL = process.env.URL;
 exports.handler = function(event, context, callback) {
   const key = event.queryStringParameters.key;
   const match = key.match(/(\d+)x(\d+)\/(.*)/);
-  const width = parseInt(match[1], 10);
-  const height = parseInt(match[2], 10);
+  console.log(match);
+  // const width = parseInt(match[1], 10);
+  // const height = parseInt(match[2], 10);
+  // const originalKey = match[3];
+  const width = 500;
+  const height = 500;
   const originalKey = match[3];
 
   S3.getObject({Bucket: BUCKET, Key: originalKey}).promise()
